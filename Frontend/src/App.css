@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  main .left,
+  main .right {
+    flex-basis: 100%;
+    height: auto;
+    min-height: 50vh;
+  }
+
+  .left .code {
+    height: 300px; 
+  }
+
+  .review {
+    position: static;
+    margin: 1rem auto;
+    width: fit-content;
+    display: block;
+  }
+
+  .logo img {
+    left: 0;
+    margin: auto;
+    display: block;
+    height: 60px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  main {
+    padding: 0.7rem;
+  }
+
+  .left .code {
+    height: 250px;
+  }
+
+  .right {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .review {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+.hero{
+  background: linear-gradient(160deg, #000000 0%, #0d0d0d 50%, #1a1a1a 100%);
+  border: 2px solid gray;
+  border-radius: 0.7rem;
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow: hidden;
+
+}
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem; 
+}
+
+.review.loading {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid transparent;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+main .left,
+main .right {
+  height: 70%;
+  border-radius: 0.7rem;
+  flex-basis: 50%;
+  overflow: hidden;
+}
+main .left{
+  background-color:black ;
+  border: 1px solid whitesmoke;
+}
+.left .code,
+.code pre,
+.code pre code{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  background-color: black;
+  border-radius: 0.7rem;
+}
+main .right{
+  background-color: rgb(23, 22, 22);
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  overflow:auto;
+  border: 1px solid whitesmoke;
+}
+main .right:hover{
+  background-color: rgb(41, 40, 40);
+}
+main .left .review{
+  position: absolute;
+  bottom: 3.8rem;
+  left: 45%;
+  background-color: rgb(127, 187, 255);
+  color: black;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 0.7rem;
+  user-select: none;
+  padding: 0.5rem 2rem;
+
+}
+main .left .review:hover{
+  background-color: rgb(164, 235, 235);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2); 
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.logo img {
+  height: 70px;
+  width: auto;
+}
+
+.error {
+  color: #ff6b6b;
+  margin-bottom: 1rem;
+}
