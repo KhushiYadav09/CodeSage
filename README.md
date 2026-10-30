@@ -1,9 +1,4 @@
 # CodeSage: AI Code Reviewer
-
-React + Node/Express app that sends your code to Google Gemini (gemini-2.5-flash)
-and returns a structured review: summary, categorized issues, fixes, improvements
-and a score out of 10.
-
 ## Run locally
 
 ### Backend
