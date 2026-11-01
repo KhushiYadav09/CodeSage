@@ -1,4 +1,3 @@
-# CodeSage: AI Code Reviewer
 ## Run locally
 
 ### Backend
